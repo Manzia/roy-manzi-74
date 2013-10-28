@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Wed Feb 27 20:02:41 PST 2013:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.1.2 - (1095077): instance a816c00e-013d-1ef7-5ec4-000000c08998 
+on database directory /private/var/folders/wq/3z5rqjv952n_cr7_y80vl1f80000gn/T/gfembed6718837646358871075tmp/lib/databases/embedded_default  with class loader sun.misc.Launcher$AppClassLoader@1f3e8d89 
+Loaded from file:/Users/admin/glassfish3/javadb/lib/derby.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_41-b02-445-11M4107
+user.dir=/ShoppingService/LocalGitRepo/ManziaProduction/MzShoppingReleaseFinal
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

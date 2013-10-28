@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.manzia.com/RankResultsXMLSchema" 
+xmlns:mz="http://www.manzia.com/RankResultsXMLSchema" elementFormDefault="qualified">
+<xs:element name="rankResults">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="rankResult" type="mz:rankResultType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+	<xs:complexType name="rankResultType">
+		<xs:sequence>
+			<xs:element name="rankQuality" type="xs:string"/>
+			<xs:element name="rankRating" type="xs:decimal"/>							
+		</xs:sequence>
+	</xs:complexType>	
+</xs:schema>

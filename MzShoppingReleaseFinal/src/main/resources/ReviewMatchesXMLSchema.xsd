@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.manzia.com/ReviewMatchesXMLSchema" 
+xmlns:mz="http://www.manzia.com/ReviewMatchesXMLSchema" elementFormDefault="qualified">
+<xs:element name="reviewMatches">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="reviewMatch" type="mz:reviewMatchType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+	<xs:complexType name="reviewMatchType">
+		<xs:sequence>
+			<xs:element name="reviewId" type="xs:token"/>
+			<xs:element name="reviewSku" type="xs:token"/>
+			<xs:element name="reviewCategory" type="xs:token"/>
+			<xs:element name="reviewTitle" type="xs:string"/>
+			<xs:element name="reviewContent" type="xs:string"/>
+			<xs:element name="reviewRating" type="xs:decimal"/>
+			<xs:element name="reviewSubmitTime" type="xs:dateTime"/>
+			<xs:element name="reviewAuthor" type="xs:token"/>
+			<xs:element name="reviewSource" type="xs:string"/>				
+		</xs:sequence>
+	</xs:complexType>	
+</xs:schema>

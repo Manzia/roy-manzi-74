@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<model_numbers modelNum="A111-222-333" modelBrand="Manzia"
+					modelCategory="Shopping App" modelFileName="manziashopping.xml"
+					retailerCategory="shopping apps" retailerItemId="A11112222"/>
+</dataset>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.manzia.com/RankedProductXMLSchema" 
+xmlns:mz="http://www.manzia.com/RankedProductXMLSchema" elementFormDefault="qualified">
+<xs:element name="rankedProducts">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="rankedProduct" type="mz:rankedProductType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+	<xs:complexType name="rankedProductType">
+		<xs:sequence>
+			<xs:element name="title">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="type" type="xs:token" default="text"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="link" type="mz:linkType"/>
+			<xs:element name="image_link" type="xs:anyURI"/>
+			<xs:element name="thumbnail_link" type="xs:anyURI"/>
+			<xs:element name="id" type="xs:string"/>
+			<xs:element name="description" type="xs:token"/>
+			<xs:element name="content_language" type="xs:string"/>
+			<xs:element name="target_country" type="xs:string"/>
+			<xs:element name="product_type" type="mz:productType"/>
+			<xs:element name="price" type="mz:priceType"/>
+			<xs:element name="brand" type="xs:string"/>
+			<xs:element name="condition" type="xs:string"/>
+			<xs:element name="availability" type="xs:string"/>			
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="linkType">
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType">
+				<xs:attribute name="rel" type="xs:string" default="alternate"/>
+				<xs:attribute name="type" type="xs:string" default="text/html"/>
+				<xs:attribute name="href" type="xs:anyURI"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>	
+	<xs:complexType name="productType">
+		<xs:simpleContent>
+			<xs:extension base="xs:token">
+				<xs:attribute name="classId" type="xs:string"/>
+				<xs:attribute name="subClassId" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="priceType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="unit" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>	
+</xs:schema>

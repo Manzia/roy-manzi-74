@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+<!-- For Deployment to Production on AWS, use unit Name: ManziaServicePU type JTA
+For testing purposes use unitName: ManziaShoppingRelease type RESOURCE_LOCAL
+<persistence-unit name="ManziaShoppingRelease" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>com.manzia.shopping.model.MzProductSkus</class>
+		<class>com.manzia.shopping.model.MzModelNumber</class>
+		<class>com.manzia.shopping.model.MzModelNumberPK</class>
+		<class>com.manzia.shopping.model.MzUserDevice</class>
+		<class>com.manzia.shopping.model.MzAttributeName</class>
+		<class>com.manzia.shopping.model.MzSearchDetail</class>
+		<class>com.manzia.shopping.model.MzProductResult</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://192.168.1.109:3306/RetailerDB"/>
+			<property name="javax.persistence.jdbc.user" value="manzia"/>
+			<property name="javax.persistence.jdbc.password" value="manzia"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			<property name="eclipselink.target-database" value="MySQL"/>
+			<property name="eclipselink.ddl-generation" value="none"/>
+		</properties>
+	</persistence-unit> -->
+ <persistence-unit name="ManziaServicePU" transaction-type="JTA">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<jta-data-source>jdbc/manziaDataSource</jta-data-source>
+		<class>com.manzia.shopping.model.MzProductSkus</class>
+		<class>com.manzia.shopping.model.MzModelNumber</class>
+		<class>com.manzia.shopping.model.MzModelNumberPK</class>
+		<class>com.manzia.shopping.model.MzUserDevice</class>
+		<class>com.manzia.shopping.model.MzAttributeName</class>
+		<class>com.manzia.shopping.model.MzSearchDetail</class>
+		<class>com.manzia.shopping.model.MzProductResult</class>
+		<properties>
+			<property name="eclipselink.target-database" value="MySQL"/>
+			<property name="eclipselink.ddl-generation" value="none"/>
+			<property name="eclipselink.jdbc.batch-writing" value="Buffered"/>
+		</properties>
+		
+	</persistence-unit>
+</persistence>
