@@ -26,10 +26,10 @@ public class CalculateAWSSignature {
 	private static final String REQUEST_METHOD = "GET";
 	
 	private final String endpoint = "webservices.amazon.com";	// must be lowercase
-	private final String awsAccessKeyId = "AKIAINWAMPMQXIUH5HTA";
-	private final String awsSecretKey = "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";
-	private final String SERVICE = "AWSEcommerceService";
-	private final String associateTag = "wwwmanziacom-20";
+	private final String awsAccessKeyId = "";
+	private final String awsSecretKey = ";
+	private final String SERVICE = "";
+	private final String associateTag = "";
 	
 	private SecretKeySpec secretKeySpec = null;
 	private Mac mac = null;
